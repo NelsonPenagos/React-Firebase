@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './pages/containers/Home';
+import Home from './pages/containers/home';
 import registerServiceWorker from './registerServiceWorker';
 import 'bulma/css/bulma.css';
 
