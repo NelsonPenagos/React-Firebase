@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './pages/containers/App';
+import Home from './pages/containers/Home';
 import registerServiceWorker from './registerServiceWorker';
 import 'bulma/css/bulma.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Home />, document.getElementById('root'));
 registerServiceWorker();

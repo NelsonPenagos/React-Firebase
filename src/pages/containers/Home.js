@@ -1,32 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import firebase from 'firebase';
 import HomeLayout from '../component/home-layout';
-import config from '../../config/setupFirebase';
-class App extends Component {
+class Home extends PureComponent {
 
   state = {
     user : null,
     infoPage : false
-  }
-  renderLoginButton() {
-    if (this.state.user) {
-      return (
-        <div>
-          <img src={this.state.user.photoURL} alt={this.state.user.displayName}/>
-          Hola {this.state.user.displayName}!
-          <button onClick={this.handleLogout}>Salir</button>
-        </div>
-      )        
-    }else {
-      return (
-          <a className="button" onClick={this.handleAuth}>
-            <span className="icon">
-              <i className="fab fa-google"></i>
-            </span>
-            <span>Login con Google</span>
-          </a>      
-      )       
-    }
   }
 
   handleAuth = (info) => {
@@ -64,4 +43,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
